@@ -84,7 +84,7 @@ const PortfolioGallery = ({
 
         <div className="mt-12 text-center">
           <Button
-            className="bg-amber-800 hover:bg-amber-900 text-white px-8 py-2 h-auto"
+            className="bg-bronze hover:bg-purple text-white px-8 py-2 h-auto"
             style={{ borderRadius: 0 }}
           >
             View All Projects
@@ -123,14 +123,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
           <h3 className="text-xl font-semibold text-slate-900">
             {project.title}
           </h3>
-          <span className="text-xs uppercase tracking-wider text-amber-800 bg-amber-50 px-2 py-1">
+          <span className="text-xs uppercase tracking-wider text-bronze bg-bronze/10 px-2 py-1">
             {project.category}
           </span>
         </div>
         <p className="text-slate-600">{project.description}</p>
         <Button
           variant="outline"
-          className="mt-4 border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-white w-full"
+          className="mt-4 border-bronze text-bronze hover:bg-purple hover:text-white w-full"
           style={{ borderRadius: 0 }}
         >
           View Details
@@ -167,33 +167,6 @@ const defaultProjects: Project[] = [
       "A welcoming café space designed with sustainable materials and artisanal details.",
     imageUrl:
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
-  },
-  {
-    id: "4",
-    title: "Luxury Boutique Hotel",
-    category: "hospitality",
-    description:
-      "Sophisticated interiors that balance opulence with understated elegance.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
-  },
-  {
-    id: "5",
-    title: "Mountain Chalet",
-    category: "residential",
-    description:
-      "A contemporary interpretation of alpine architecture with panoramic mountain views.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80",
-  },
-  {
-    id: "6",
-    title: "Corporate Headquarters",
-    category: "commercial",
-    description:
-      "A dynamic workspace designed to foster collaboration and creativity.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600494603989-9650cf6ddd3d?w=800&q=80",
   },
 ];
 

@@ -46,12 +46,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <Mail className="w-5 h-5 text-amber-800 mt-1 mr-3" />
+                  <Mail className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-stone-800">Email</p>
                     <a
                       href={`mailto:${contactInfo.email}`}
-                      className="text-stone-600 hover:text-amber-800 transition-colors"
+                      className="text-stone-600 hover:text-bronze transition-colors"
                     >
                       {contactInfo.email}
                     </a>
@@ -59,12 +59,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 <div className="flex items-start">
-                  <Phone className="w-5 h-5 text-amber-800 mt-1 mr-3" />
+                  <Phone className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-stone-800">Phone</p>
                     <a
                       href={`tel:${contactInfo.phone}`}
-                      className="text-stone-600 hover:text-amber-800 transition-colors"
+                      className="text-stone-600 hover:text-bronze transition-colors"
                     >
                       {contactInfo.phone}
                     </a>
@@ -72,7 +72,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 <div className="flex items-start">
-                  <MapPin className="w-5 h-5 text-amber-800 mt-1 mr-3" />
+                  <MapPin className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-stone-800">Address</p>
                     <p className="text-stone-600">{contactInfo.address}</p>
@@ -80,7 +80,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 <div className="flex items-start">
-                  <Clock className="w-5 h-5 text-amber-800 mt-1 mr-3" />
+                  <Clock className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
                     <p className="font-medium text-stone-800">Hours</p>
                     <p className="text-stone-600">{contactInfo.hours}</p>
@@ -96,7 +96,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-amber-800 hover:text-white transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -114,7 +114,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-amber-800 hover:text-white transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
                 >
                   <span className="sr-only">Pinterest</span>
                   <svg
@@ -128,7 +128,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-amber-800 hover:text-white transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg
@@ -160,7 +160,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     <Input
                       id="name"
                       placeholder="Your name"
-                      className="border-stone-300 focus:border-amber-800 focus:ring-amber-800 rounded-none"
+                      className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
                     />
                   </div>
 
@@ -172,7 +172,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                       id="email"
                       type="email"
                       placeholder="Your email"
-                      className="border-stone-300 focus:border-amber-800 focus:ring-amber-800 rounded-none"
+                      className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
                     />
                   </div>
                 </div>
@@ -184,7 +184,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <Input
                     id="phone"
                     placeholder="Your phone number"
-                    className="border-stone-300 focus:border-amber-800 focus:ring-amber-800 rounded-none"
+                    className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
                   />
                 </div>
 
@@ -195,7 +195,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <Input
                     id="subject"
                     placeholder="Subject"
-                    className="border-stone-300 focus:border-amber-800 focus:ring-amber-800 rounded-none"
+                    className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
                   />
                 </div>
 
@@ -206,14 +206,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   <Textarea
                     id="message"
                     placeholder="Your message"
-                    className="min-h-[120px] border-stone-300 focus:border-amber-800 focus:ring-amber-800 rounded-none"
+                    className="min-h-[120px] border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
                   />
                 </div>
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-amber-800 hover:bg-amber-900 text-white rounded-none"
+                className="w-full bg-bronze hover:bg-bronze-700 text-white rounded-none"
               >
                 Send Message
               </Button>

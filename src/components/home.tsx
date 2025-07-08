@@ -2,6 +2,9 @@ import Header from "./Header";
 import HeroSection from "./HeroSection";
 import SecondarySection from "./SecondarySection";
 import PortfolioGallery from "./PortfolioGallery";
+import ProofSection from "./ProofSection";
+import ServicesSection from "./ServicesSection";
+import ProductsSection from "./ProductsSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 
@@ -12,6 +15,9 @@ function Home() {
       <HeroSection />
       <SecondarySection />
       <PortfolioGallery />
+      <ProofSection />
+      <ServicesSection />
+      <ProductsSection />
       <ContactSection />
       <Footer />
     </div>

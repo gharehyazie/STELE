@@ -12,8 +12,8 @@ interface HeroSectionProps {
 const HeroSection = ({
   title = "STELE: Design + Decor",
   tagline = "Elevating spaces through thoughtful design and curated aesthetics",
-  ctaText = "View Projects",
-  onCtaClick = () => console.log("View Projects clicked"),
+  ctaText = "Let's talk",
+  onCtaClick = () => console.log("Let's talk clicked"),
 }: HeroSectionProps) => {
   return (
     <section className="relative h-screen w-full bg-[#f5f3f0]">
@@ -37,7 +37,7 @@ const HeroSection = ({
           <p className="mb-8 text-lg text-white/90 md:text-xl">{tagline}</p>
           <Button
             onClick={onCtaClick}
-            className="group bg-[#d4a373] text-white hover:bg-[#c69c6d] rounded-none"
+            className="group bg-bronze text-white hover:bg-bronze-700 rounded-none"
           >
             {ctaText}
             <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -46,7 +46,7 @@ const HeroSection = ({
       </div>
 
       {/* Decorative Element */}
-      <div className="absolute bottom-8 right-8 z-10 hidden h-24 w-1 bg-[#d4a373] lg:block"></div>
+      <div className="absolute bottom-8 right-8 z-10 hidden h-24 w-1 bg-bronze lg:block"></div>
     </section>
   );
 };

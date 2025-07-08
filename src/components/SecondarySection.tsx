@@ -36,7 +36,7 @@ const SecondarySection = ({
             {title}
           </h2>
 
-          <div className="w-20 h-[2px] bg-amber-700 mb-8"></div>
+          <div className="w-20 h-[2px] bg-bronze mb-8"></div>
 
           <p className="text-lg md:text-xl mb-10 leading-relaxed font-light">
             {description}
@@ -44,7 +44,7 @@ const SecondarySection = ({
 
           <Button
             onClick={onButtonClick}
-            className="bg-amber-700 hover:bg-amber-800 text-white rounded-none px-8 py-6 h-auto text-base"
+            className="bg-bronze hover:bg-bronze-700 text-white rounded-none px-8 py-6 h-auto text-base"
           >
             {buttonText}
           </Button>

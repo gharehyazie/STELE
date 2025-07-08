@@ -47,15 +47,24 @@ const Header = ({
               <Button
                 key={item}
                 variant="ghost"
-                className={`transition-all duration-300 hover:bg-amber-800/10 ${
+                className={`transition-all duration-300 hover:bg-bronze/10 ${
                   isScrolled
-                    ? "text-slate-900 hover:text-amber-800"
-                    : "text-white hover:text-amber-200"
+                    ? "text-slate-900 hover:text-bronze"
+                    : "text-white hover:text-bronze-200"
                 }`}
               >
                 {item}
               </Button>
             ))}
+            <Button
+              className={`ml-4 rounded-none transition-all duration-300 ${
+                isScrolled
+                  ? "bg-bronze hover:bg-bronze-700 text-white"
+                  : "bg-bronze hover:bg-bronze-700 text-white"
+              }`}
+            >
+              Let's talk
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -79,12 +88,18 @@ const Header = ({
                 <Button
                   key={item}
                   variant="ghost"
-                  className="w-full justify-start text-slate-900 hover:text-amber-800 hover:bg-amber-50"
+                  className="w-full justify-start text-slate-900 hover:text-bronze hover:bg-bronze-50"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}
                 </Button>
               ))}
+              <Button
+                className="w-full bg-bronze hover:bg-bronze-700 text-white rounded-none mt-2"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Let's talk
+              </Button>
             </div>
           </div>
         )}
