@@ -33,12 +33,16 @@ const Header = ({
       <nav className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div
-            className={`text-xl font-bold transition-colors duration-300 ${
-              isScrolled ? "text-slate-900" : "text-white"
-            }`}
-          >
-            {logo}
+          <div className="transition-opacity duration-300">
+            <img
+              src={
+                isScrolled
+                  ? "/images/stele_logo_orange.png"
+                  : "/images/stele_logo_beige.png"
+              }
+              alt="STELE"
+              className="h-8 w-auto transition-all duration-300"
+            />
           </div>
 
           {/* Desktop Navigation */}

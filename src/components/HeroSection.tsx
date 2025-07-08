@@ -10,7 +10,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection = ({
-  title = "STELE: Design + Decor",
+  title = "Design + Decor",
   tagline = "Elevating spaces through thoughtful design and curated aesthetics",
   ctaText = "Let's talk",
   onCtaClick = () => console.log("Let's talk clicked"),

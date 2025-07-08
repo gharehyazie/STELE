@@ -3,6 +3,7 @@ import HeroSection from "./HeroSection";
 import SecondarySection from "./SecondarySection";
 import PortfolioGallery from "./PortfolioGallery";
 import ProofSection from "./ProofSection";
+import PhotoSection from "./PhotoSection";
 import ServicesSection from "./ServicesSection";
 import ProductsSection from "./ProductsSection";
 import ContactSection from "./ContactSection";
@@ -16,6 +17,7 @@ function Home() {
       <SecondarySection />
       <PortfolioGallery />
       <ProofSection />
+      <PhotoSection />
       <ServicesSection />
       <ProductsSection />
       <ContactSection />
