@@ -28,13 +28,13 @@ const ServicesSection = ({
   services = defaultServices,
 }: ServicesSectionProps) => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-stone-50">
+    <section className="py-16 px-4 md:px-8 lg:px-16 bg-mediumGrey">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             {title}
           </h2>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Comprehensive design and project management services tailored to
             your vision
           </p>
@@ -52,15 +52,15 @@ const ServicesSection = ({
 
 const ServiceCard = ({ service }: { service: Service }) => {
   return (
-    <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-white">
+    <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-darkGrey">
       <CardContent className="p-6 text-center">
         <div className="w-16 h-16 mx-auto mb-4 bg-bronze/10 rounded-full flex items-center justify-center text-bronze">
           {service.icon}
         </div>
-        <h3 className="text-lg font-semibold text-slate-900 mb-2">
+        <h3 className="text-lg font-semibold text-white mb-2">
           {service.title}
         </h3>
-        <p className="text-slate-600 text-sm">{service.description}</p>
+        <p className="text-white/70 text-sm">{service.description}</p>
       </CardContent>
     </Card>
   );

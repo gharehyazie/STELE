@@ -15,7 +15,7 @@ const SecondarySection = ({
   onButtonClick = () => console.log("About button clicked"),
 }: SecondarySectionProps) => {
   return (
-    <section className="relative w-full h-[700px] bg-stone-100">
+    <section className="relative w-full h-[700px] bg-mediumGrey">
       {/* Background image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-0"

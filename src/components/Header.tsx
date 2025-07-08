@@ -27,7 +27,7 @@ const Header = ({
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-darkGrey shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <nav className="container mx-auto px-4 md:px-8 lg:px-16">
@@ -53,7 +53,7 @@ const Header = ({
                 variant="ghost"
                 className={`transition-all duration-300 hover:bg-bronze/10 ${
                   isScrolled
-                    ? "text-slate-900 hover:text-bronze"
+                    ? "text-white hover:text-bronze"
                     : "text-white hover:text-bronze-200"
                 }`}
               >
@@ -76,7 +76,7 @@ const Header = ({
             variant="ghost"
             size="icon"
             className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? "text-slate-900" : "text-white"
+              isScrolled ? "text-white" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -86,13 +86,13 @@ const Header = ({
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-darkGrey shadow-lg border-t border-white/20">
             <div className="py-4 px-4 space-y-2">
               {menuItems.map((item) => (
                 <Button
                   key={item}
                   variant="ghost"
-                  className="w-full justify-start text-slate-900 hover:text-bronze hover:bg-bronze-50"
+                  className="w-full justify-start text-white hover:text-bronze hover:bg-bronze/10"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}

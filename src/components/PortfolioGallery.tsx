@@ -17,13 +17,13 @@ const PortfolioGallery = ({
   projects?: Project[];
 }) => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-stone-50">
+    <section className="py-16 px-4 md:px-8 lg:px-16 bg-mediumGrey">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Our Portfolio
           </h2>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Explore our collection of thoughtfully designed spaces that blend
             functionality with aesthetic excellence.
           </p>
@@ -31,7 +31,7 @@ const PortfolioGallery = ({
 
         <Tabs defaultValue="all" className="w-full">
           <div className="flex justify-center mb-8">
-            <TabsList className="bg-stone-100 p-1">
+            <TabsList className="bg-darkGrey p-1">
               <TabsTrigger
                 value="all"
                 className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
@@ -118,16 +118,14 @@ const ProjectCard = ({ project }: { project: Project }) => {
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
-      <CardContent className="p-6 bg-white">
+      <CardContent className="p-6 bg-darkGrey">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="text-xl font-semibold text-slate-900">
-            {project.title}
-          </h3>
+          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
           <span className="text-xs uppercase tracking-wider text-bronze bg-bronze/10 px-2 py-1">
             {project.category}
           </span>
         </div>
-        <p className="text-slate-600">{project.description}</p>
+        <p className="text-white/70">{project.description}</p>
         <Button
           variant="outline"
           className="mt-4 border-bronze text-bronze hover:bg-purple hover:text-white w-full"

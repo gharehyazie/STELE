@@ -16,7 +16,7 @@ const HeroSection = ({
   onCtaClick = () => console.log("Let's talk clicked"),
 }: HeroSectionProps) => {
   return (
-    <section className="relative h-screen w-full bg-[#f5f3f0]">
+    <section className="relative h-screen w-full bg-mediumGrey">
       {/* Hero Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -30,10 +30,12 @@ const HeroSection = ({
 
       {/* Hero Content */}
       <div className="relative z-10 flex h-screen flex-col items-start justify-end p-8 lg:p-16">
-        <div className="max-w-2xl">
-          <h1 className="mb-3 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-            {title}
-          </h1>
+        <div className="max-w-xl">
+          <img
+            src="/images/stele_logo&tagline_beigev2.png"
+            alt="STELE: Design + Decor"
+            className="mb-8 h-auto max-w-md"
+          />
           <p className="mb-8 text-lg text-white/90 md:text-xl">{tagline}</p>
           <Button
             onClick={onCtaClick}

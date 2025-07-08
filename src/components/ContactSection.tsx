@@ -27,20 +27,20 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   },
 }) => {
   return (
-    <section className="w-full py-16 bg-stone-50" id="contact">
+    <section className="w-full py-16 bg-mediumGrey" id="contact">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-stone-900 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
             {title}
           </h2>
-          <p className="text-stone-600 text-center max-w-2xl">{subtitle}</p>
+          <p className="text-white/80 text-center max-w-2xl">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold text-stone-800">
+              <h3 className="text-xl font-semibold text-white">
                 Contact Information
               </h3>
 
@@ -48,10 +48,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="flex items-start">
                   <Mail className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
-                    <p className="font-medium text-stone-800">Email</p>
+                    <p className="font-medium text-white">Email</p>
                     <a
                       href={`mailto:${contactInfo.email}`}
-                      className="text-stone-600 hover:text-bronze transition-colors"
+                      className="text-white/70 hover:text-bronze transition-colors"
                     >
                       {contactInfo.email}
                     </a>
@@ -61,10 +61,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="flex items-start">
                   <Phone className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
-                    <p className="font-medium text-stone-800">Phone</p>
+                    <p className="font-medium text-white">Phone</p>
                     <a
                       href={`tel:${contactInfo.phone}`}
-                      className="text-stone-600 hover:text-bronze transition-colors"
+                      className="text-white/70 hover:text-bronze transition-colors"
                     >
                       {contactInfo.phone}
                     </a>
@@ -74,29 +74,29 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 <div className="flex items-start">
                   <MapPin className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
-                    <p className="font-medium text-stone-800">Address</p>
-                    <p className="text-stone-600">{contactInfo.address}</p>
+                    <p className="font-medium text-white">Address</p>
+                    <p className="text-white/70">{contactInfo.address}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <Clock className="w-5 h-5 text-bronze mt-1 mr-3" />
                   <div>
-                    <p className="font-medium text-stone-800">Hours</p>
-                    <p className="text-stone-600">{contactInfo.hours}</p>
+                    <p className="font-medium text-white">Hours</p>
+                    <p className="text-white/70">{contactInfo.hours}</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-6">
-              <h3 className="text-xl font-semibold text-stone-800 mb-4">
+              <h3 className="text-xl font-semibold text-white mb-4">
                 Follow Us
               </h3>
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-darkGrey hover:bg-bronze hover:text-white transition-colors"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
@@ -114,7 +114,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-darkGrey hover:bg-bronze hover:text-white transition-colors"
                 >
                   <span className="sr-only">Pinterest</span>
                   <svg
@@ -128,7 +128,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </a>
                 <a
                   href="#"
-                  className="w-10 h-10 flex items-center justify-center bg-stone-200 hover:bg-bronze hover:text-bronze transition-colors"
+                  className="w-10 h-10 flex items-center justify-center bg-darkGrey hover:bg-bronze hover:text-white transition-colors"
                 >
                   <span className="sr-only">LinkedIn</span>
                   <svg
@@ -145,8 +145,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 border border-stone-200">
-            <h3 className="text-xl font-semibold text-stone-800 mb-6">
+          <div className="bg-darkGrey p-8 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-6">
               Send us a Message
             </h3>
 
@@ -154,31 +154,31 @@ const ContactSection: React.FC<ContactSectionProps> = ({
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <Label htmlFor="name" className="text-stone-800">
+                    <Label htmlFor="name" className="text-white">
                       Name
                     </Label>
                     <Input
                       id="name"
                       placeholder="Your name"
-                      className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
+                      className="border-white/30 focus:border-bronze focus:ring-bronze rounded-none bg-mediumGrey text-white placeholder:text-white/60"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-stone-800">
+                    <Label htmlFor="email" className="text-white">
                       Email
                     </Label>
                     <Input
                       id="email"
                       type="email"
                       placeholder="Your email"
-                      className="border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
+                      className="border-white/30 focus:border-bronze focus:ring-bronze rounded-none bg-mediumGrey text-white placeholder:text-white/60"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-stone-800">
+                  <Label htmlFor="phone" className="text-white">
                     Phone
                   </Label>
                   <Input
@@ -189,7 +189,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-stone-800">
+                  <Label htmlFor="subject" className="text-white">
                     Subject
                   </Label>
                   <Input
@@ -200,13 +200,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message" className="text-stone-800">
+                  <Label htmlFor="message" className="text-white">
                     Message
                   </Label>
                   <Textarea
                     id="message"
                     placeholder="Your message"
-                    className="min-h-[120px] border-stone-300 focus:border-bronze focus:ring-bronze rounded-none"
+                    className="min-h-[120px] border-white/30 focus:border-bronze focus:ring-bronze rounded-none bg-mediumGrey text-white placeholder:text-white/60"
                   />
                 </div>
               </div>
