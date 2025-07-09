@@ -15,11 +15,11 @@ function Home() {
       <Header />
       <HeroSection />
       <SecondarySection />
-      <PortfolioGallery />
       <ProofSection />
       <PhotoSection />
       <ServicesSection />
       <ProductsSection />
+      <PortfolioGallery />
       <ContactSection />
       <Footer />
     </div>

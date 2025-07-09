@@ -36,7 +36,6 @@ const HeroSection = ({
             alt="STELE: Design + Decor"
             className="mb-8 h-auto max-w-md"
           />
-          <p className="mb-8 text-lg text-white/90 md:text-xl">{tagline}</p>
           <Button
             onClick={onCtaClick}
             className="group bg-bronze text-white hover:bg-bronze-700 rounded-none"

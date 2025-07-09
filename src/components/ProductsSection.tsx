@@ -81,8 +81,8 @@ const ProductCarousel = ({
 }: ProductCarouselProps) => {
   const isRightSlant = slantDirection === "right";
 
-  // For marbles section, only show first 3 images
-  const displayImages = title === "MARBLES" ? images.slice(0, 3) : images;
+  // For marbles section, show all 4 images
+  const displayImages = images;
 
   return (
     <div
@@ -116,54 +116,30 @@ const ProductCarousel = ({
 
       {/* Carousel/Gallery Side */}
       <div className="flex-1 relative">
-        {title === "MARBLES" ? (
-          // Static marble gallery with parallelogram shapes
-          <div className="relative h-96 flex">
-            {displayImages.map((image, index) => (
-              <div
-                key={image.id}
-                className="flex-1 h-full transform skew-x-12 overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
-                style={{
-                  marginLeft: index > 0 ? "-20px" : "0",
-                  zIndex: displayImages.length - index,
-                }}
-              >
-                <img
-                  src={image.url}
-                  alt={image.alt}
-                  className="w-full h-full object-cover transform -skew-x-12 scale-110"
-                />
-              </div>
-            ))}
-          </div>
-        ) : (
-          // Original carousel for furniture
-          <div className="relative overflow-hidden">
+        {/* Gallery with parallelogram shapes using clip-path */}
+        <div className="relative h-96 flex">
+          {images.map((image, index) => (
             <div
-              className={`relative h-96 ${isRightSlant ? "transform -skew-x-12" : "transform skew-x-12"}`}
-              style={{ perspective: "1000px" }}
+              key={image.id}
+              className="flex-1 h-full shadow-lg transition-transform duration-300 hover:scale-105"
+              style={{
+                zIndex: images.length - index,
+                clipPath:
+                  title === "MARBLES"
+                    ? "polygon(0 0, 80% 0, 100% 100%, 20% 100%)"
+                    : "polygon(20% 0, 100% 0, 80% 100%, 0% 100%)",
+                overflow: "hidden",
+                "margin-right": "-50px",
+              }}
             >
-              <div className="flex h-full">
-                {displayImages.map((image, index) => (
-                  <div
-                    key={image.id}
-                    className="flex-shrink-0 w-1/3 h-full px-2"
-                  >
-                    <div
-                      className={`h-full ${isRightSlant ? "transform skew-x-12" : "transform -skew-x-12"} overflow-hidden shadow-lg`}
-                    >
-                      <img
-                        src={image.url}
-                        alt={image.alt}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="w-full h-full object-cover"
+              />
             </div>
-          </div>
-        )}
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -173,41 +149,41 @@ const ProductCarousel = ({
 const defaultMarblesImages: ProductImage[] = [
   {
     id: "1",
-    url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80",
+    url: "/images/image 12.png",
     alt: "White Marble with Grey Veining",
   },
   {
     id: "2",
-    url: "https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=600&q=80",
-    alt: "Green and Gold Marble",
+    url: "/images/image 19.png",
+    alt: "Golden Brown Marble",
   },
   {
     id: "3",
-    url: "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?w=600&q=80",
+    url: "/images/image 22.png",
     alt: "Black Marble with Gold Veining",
+  },
+  {
+    id: "4",
+    url: "/images/GP01087_b.png",
+    alt: "Beige Marble Texture",
   },
 ];
 
 const defaultFurnitureImages: ProductImage[] = [
   {
     id: "1",
-    url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
+    url: "/images/image 23.png",
     alt: "Custom Kitchen Cabinetry",
   },
   {
     id: "2",
-    url: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80",
+    url: "/images/image 24.png",
     alt: "Modern Living Room Furniture",
   },
   {
     id: "3",
-    url: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80",
+    url: "/images/image 5.png",
     alt: "Custom Dining Set",
-  },
-  {
-    id: "4",
-    url: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&q=80",
-    alt: "Bespoke Storage Solutions",
   },
 ];
 
