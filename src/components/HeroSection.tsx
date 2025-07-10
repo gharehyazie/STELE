@@ -17,15 +17,27 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section className="relative h-screen w-full bg-mediumGrey">
-      {/* Hero Background Image */}
+      {/* Hero Background Video */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/Hero.png"
-          alt="Coastal architectural design"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover"
-        />
+          poster="/images/Hero.png"
+        >
+          <source src="/images/hero-video.mp4" type="video/mp4" />
+          <source src="/images/hero-video.webm" type="video/webm" />
+          {/* Fallback image for browsers that don't support video */}
+          <img
+            src="/images/Hero.png"
+            alt="Coastal architectural design"
+            className="h-full w-full object-cover"
+          />
+        </video>
         {/* Overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
       {/* Hero Content */}
