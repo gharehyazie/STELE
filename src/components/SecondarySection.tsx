@@ -30,7 +30,7 @@ const SecondarySection = ({
       </div>
 
       {/* Content overlay */}
-      <div className="relative z-20 container mx-auto h-full flex flex-col justify-center px-4 md:px-8 lg:px-16">
+      <div className="relative z-20 mx-auto h-full flex flex-col justify-center px-4 md:px-8 lg:px-16">
         <div className="max-w-2xl text-white">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-6 tracking-tight">
             {title}
@@ -41,13 +41,6 @@ const SecondarySection = ({
           <p className="text-lg md:text-xl mb-10 leading-relaxed font-light">
             {description}
           </p>
-
-          <Button
-            onClick={onButtonClick}
-            className="bg-bronze hover:bg-bronze-700 text-white rounded-none px-8 py-6 h-auto text-base"
-          >
-            {buttonText}
-          </Button>
         </div>
       </div>
     </section>

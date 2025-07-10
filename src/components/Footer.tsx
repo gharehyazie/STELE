@@ -32,7 +32,7 @@ const Footer = ({
 }: FooterProps) => {
   return (
     <footer className="bg-bronze text-white">
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 py-12">
+      <div className="mx-auto px-4 md:px-8 lg:px-16 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
