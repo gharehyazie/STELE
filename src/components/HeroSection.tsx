@@ -38,7 +38,7 @@ const HeroSection = ({
           />
           <Button
             onClick={onCtaClick}
-            className="group bg-bronze text-white hover:bg-bronze-700 rounded-none"
+            className="group bg-bronze text-white hover:bg-bronze-700 rounded-none w-48"
           >
             {ctaText}
             <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

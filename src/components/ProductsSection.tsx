@@ -20,8 +20,8 @@ const ProductsSection = ({
   furnitureImages = defaultFurnitureImages,
 }: ProductsSectionProps) => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-darkGrey">
-      <div className="mx-auto px-4 md:px-8 lg:px-16">
+    <section className="py-16 bg-darkGrey md:px-[-16] px-[-16] lg:px-[-16] pb-0">
+      <div className="mx-auto lg:px-0 md:px-0 px-0">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             {title}
@@ -32,7 +32,7 @@ const ProductsSection = ({
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-16 px-4">
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
@@ -41,7 +41,8 @@ const ProductsSection = ({
             images={marblesImages}
             slantDirection="right"
           />
-
+        </div>
+        <div className="space-y-16 px-4 pl-0 md:pl-0 lg:pl-[0]">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
@@ -55,6 +56,7 @@ const ProductsSection = ({
               "Carpets and soft furnishing",
               "Partition and decorative systems",
             ]}
+            className=""
           />
         </div>
       </div>
