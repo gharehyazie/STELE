@@ -20,19 +20,19 @@ const ProductsSection = ({
   furnitureImages = defaultFurnitureImages,
 }: ProductsSectionProps) => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-darkGrey">
-      <div className="mx-auto px-4 md:px-8 lg:px-16">
+    <section className="py-16 bg-orange md:px-[-16] px-[-16] lg:px-[-16] pb-0 overflow-hidden">
+      <div className="mx-auto lg:px-0 md:px-0 px-0">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple">
             {title}
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-purple/80 max-w-2xl mx-auto">
             Premium materials and custom solutions for exceptional design
             projects
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="pl-16 -mr-16">
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
@@ -41,7 +41,8 @@ const ProductsSection = ({
             images={marblesImages}
             slantDirection="right"
           />
-
+        </div>
+        <div className="pr-16 -ml-16 bg-mediumGrey py-16">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
@@ -55,6 +56,7 @@ const ProductsSection = ({
               "Carpets and soft furnishing",
               "Partition and decorative systems",
             ]}
+            className=""
           />
         </div>
       </div>
@@ -86,38 +88,50 @@ const ProductCarousel = ({
 
   return (
     <div
-      className={`flex flex-col lg:flex-row items-center gap-8 ${isRightSlant ? "" : "lg:flex-row-reverse"}`}
+      className={`flex flex-col lg:flex-row items-center gap-16 ${isRightSlant ? "" : "lg:flex-row-reverse"}`}
     >
       {/* Content Side */}
-      <div className={`flex-1 ${isRightSlant ? "lg:pr-8" : "lg:pl-8"}`}>
+      <div
+        className={`w-full lg:w-2/5 ${isRightSlant ? "lg:pr-16" : "lg:pl-16 text-right"}`}
+      >
         <div className="mb-4">
-          <p className="text-sm text-white/60 mb-2">Our products</p>
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <p className="text-sm text-purple/60 mb-2">Our products</p>
+          <h3 className="text-2xl md:text-3xl font-bold text-purple mb-4">
             {title}
           </h3>
         </div>
 
         <div className="mb-6">
-          <p className="text-lg text-white/90 mb-2 italic">{subtitle}</p>
-          <p className="text-white/70">{description}</p>
+          <p className="text-lg text-purple/90 mb-2 italic">{subtitle}</p>
+          <p className="text-purple/70">{description}</p>
         </div>
 
         {features && (
           <div className="space-y-2">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-start">
-                <span className="text-bronze mr-2 mt-1">•</span>
-                <span className="text-white/80">{feature}</span>
+              <div
+                key={index}
+                className={`flex items-start ${!isRightSlant ? "justify-end" : ""}`}
+              >
+                <span
+                  className={`text-orange mt-1 ${isRightSlant ? "mr-2" : "ml-2 order-2"}`}
+                >
+                  •
+                </span>
+                <span
+                  className={`text-purple/80 ${!isRightSlant ? "order-1" : ""}`}
+                >
+                  {feature}
+                </span>
               </div>
             ))}
           </div>
         )}
       </div>
-
       {/* Carousel/Gallery Side */}
-      <div className="flex-1 relative">
+      <div className="w-full lg:w-3/5 relative">
         {/* Gallery with parallelogram shapes using clip-path */}
-        <div className="relative h-96 flex">
+        <div className="relative h-[500px] flex">
           {images.map((image, index) => (
             <div
               key={image.id}

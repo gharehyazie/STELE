@@ -31,7 +31,7 @@ const PortfolioGallery = ({
 
         <Tabs defaultValue="all" className="w-full">
           <div className="flex justify-center mb-8">
-            <TabsList className="bg-darkGrey p-1">
+            <TabsList className="bg-beige p-1">
               <TabsTrigger
                 value="all"
                 className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
@@ -84,7 +84,7 @@ const PortfolioGallery = ({
 
         <div className="mt-12 text-center">
           <Button
-            className="bg-bronze hover:bg-purple text-white px-8 py-2 h-auto"
+            className="bg-orange hover:bg-purple text-white px-8 py-2 h-auto"
             style={{ borderRadius: 0 }}
           >
             View All Projects
@@ -118,17 +118,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
-      <CardContent className="p-6 bg-darkGrey">
+      <CardContent className="p-6 bg-beige">
         <div className="flex justify-between items-center mb-2">
-          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-          <span className="text-xs uppercase tracking-wider text-bronze bg-bronze/10 px-2 py-1">
+          <h3 className="text-xl font-semibold text-purple">{project.title}</h3>
+          <span className="text-xs uppercase tracking-wider text-orange bg-orange/10 px-2 py-1">
             {project.category}
           </span>
         </div>
-        <p className="text-white/70">{project.description}</p>
+        <p className="text-purple/70">{project.description}</p>
         <Button
           variant="outline"
-          className="mt-4 border-bronze text-bronze hover:bg-purple hover:text-white w-full"
+          className="mt-4 border-orange text-orange hover:bg-purple hover:text-white w-full"
           style={{ borderRadius: 0 }}
         >
           View Details

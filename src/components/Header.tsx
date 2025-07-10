@@ -27,7 +27,7 @@ const Header = ({
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-darkGrey shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-beige shadow-md backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <nav className="mx-auto px-4 md:px-8 lg:px-16">
@@ -51,10 +51,10 @@ const Header = ({
               <Button
                 key={item}
                 variant="ghost"
-                className={`transition-all duration-300 hover:bg-bronze/10 ${
+                className={`transition-all duration-300 hover:bg-orange/10 ${
                   isScrolled
-                    ? "text-white hover:text-bronze"
-                    : "text-white hover:text-bronze-200"
+                    ? "text-purple hover:text-orange"
+                    : "text-white hover:text-orange-200"
                 }`}
               >
                 {item}
@@ -63,8 +63,8 @@ const Header = ({
             <Button
               className={`ml-4 rounded-none transition-all duration-300 ${
                 isScrolled
-                  ? "bg-bronze hover:bg-bronze-700 text-white"
-                  : "bg-bronze hover:bg-bronze-700 text-white"
+                  ? "bg-orange hover:bg-orange-700 text-white"
+                  : "bg-orange hover:bg-orange-700 text-white"
               }`}
             >
               Let's talk
@@ -76,7 +76,7 @@ const Header = ({
             variant="ghost"
             size="icon"
             className={`md:hidden transition-colors duration-300 ${
-              isScrolled ? "text-white" : "text-white"
+              isScrolled ? "text-purple" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -86,20 +86,20 @@ const Header = ({
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-darkGrey shadow-lg border-t border-white/20">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-beige shadow-lg border-t border-white/20">
             <div className="py-4 px-4 space-y-2">
               {menuItems.map((item) => (
                 <Button
                   key={item}
                   variant="ghost"
-                  className="w-full justify-start text-white hover:text-bronze hover:bg-bronze/10"
+                  className="w-full justify-start text-purple hover:text-orange hover:bg-orange/10"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item}
                 </Button>
               ))}
               <Button
-                className="w-full bg-bronze hover:bg-bronze-700 text-white rounded-none mt-2"
+                className="w-full bg-orange hover:bg-orange-700 text-white rounded-none mt-2"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Let's talk
