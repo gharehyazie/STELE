@@ -52,15 +52,15 @@ const ServicesSection = ({
 
 const ServiceCard = ({ service }: { service: Service }) => {
   return (
-    <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-darkGrey">
+    <Card className="border-0 shadow-md hover:shadow-lg transition-shadow duration-300 bg-beige">
       <CardContent className="p-6 text-center">
-        <div className="w-16 h-16 mx-auto mb-4 bg-bronze/10 rounded-full flex items-center justify-center text-bronze">
+        <div className="w-16 h-16 mx-auto mb-4 bg-orange/10 rounded-full flex items-center justify-center text-orange">
           {service.icon}
         </div>
-        <h3 className="text-lg font-semibold text-white mb-2">
+        <h3 className="text-lg font-semibold text-purple mb-2">
           {service.title}
         </h3>
-        <p className="text-white/70 text-sm">{service.description}</p>
+        <p className="text-purple/70 text-sm">{service.description}</p>
       </CardContent>
     </Card>
   );

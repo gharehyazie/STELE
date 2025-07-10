@@ -38,7 +38,7 @@ const HeroSection = ({
           />
           <Button
             onClick={onCtaClick}
-            className="group bg-bronze text-white hover:bg-bronze-700 rounded-none w-48"
+            className="group bg-orange text-white hover:bg-orange-700 rounded-none w-48"
           >
             {ctaText}
             <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -47,7 +47,7 @@ const HeroSection = ({
       </div>
 
       {/* Decorative Element */}
-      <div className="absolute bottom-8 right-8 z-10 hidden h-24 w-1 bg-bronze lg:block"></div>
+      <div className="absolute bottom-8 right-8 z-10 hidden h-24 w-1 bg-orange lg:block"></div>
     </section>
   );
 };

@@ -39,10 +39,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     <section className="w-full py-16 bg-mediumGrey" id="contact">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-darkGrey-800 mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-purple mb-3">
             {title}
           </h2>
-          <p className="text-darkGrey-700 text-center max-w-2xl">{subtitle}</p>
+          <p className="text-purple/70 text-center max-w-2xl">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto px-4 md:px-8 lg:px-16">
@@ -72,7 +72,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="bg-white border-darkGrey-300 text-darkGrey-800 placeholder:text-darkGrey-500 focus:border-bronze focus:ring-bronze"
+                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange"
                   />
                 </div>
                 <div>
@@ -83,7 +83,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="bg-white border-darkGrey-300 text-darkGrey-800 placeholder:text-darkGrey-500 focus:border-bronze focus:ring-bronze"
+                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange"
                   />
                 </div>
               </div>
@@ -95,7 +95,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="bg-white border-darkGrey-300 text-darkGrey-800 placeholder:text-darkGrey-500 focus:border-bronze focus:ring-bronze"
+                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange"
                 />
               </div>
 
@@ -107,13 +107,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="bg-white border-darkGrey-300 text-darkGrey-800 placeholder:text-darkGrey-500 focus:border-bronze focus:ring-bronze resize-none"
+                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange resize-none"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-bronze hover:bg-bronze-600 text-white font-semibold py-3 px-6 transition-colors duration-200"
+                className="w-full bg-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 transition-colors duration-200"
               >
                 Send Message
               </Button>
