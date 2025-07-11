@@ -32,7 +32,7 @@ const ProductsSection = ({
           </p>
         </div>
 
-        <div className="pl-16 -mr-16">
+        <div>
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
@@ -42,7 +42,7 @@ const ProductsSection = ({
             slantDirection="right"
           />
         </div>
-        <div className="pr-16 -ml-16 bg-mediumGrey py-16">
+        <div className="bg-mediumGrey">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
@@ -163,13 +163,13 @@ const ProductCarousel = ({
 const defaultMarblesImages: ProductImage[] = [
   {
     id: "1",
-    url: "/images/image 12.png",
-    alt: "White Marble with Grey Veining",
+    url: "/images/image 19.png",
+    alt: "Golden Brown Marble",
   },
   {
     id: "2",
-    url: "/images/image 19.png",
-    alt: "Golden Brown Marble",
+    url: "/images/image 12.png",
+    alt: "White Marble with Grey Veining",
   },
   {
     id: "3",
