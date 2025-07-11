@@ -17,9 +17,10 @@ const Footer = ({
   companyName = "STELE: Design + Decor",
   tagline = "Elevating spaces through thoughtful design and curated aesthetics",
   contactInfo = {
-    email: "info@steledesign.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Design Avenue, Suite 500, New York, NY 10001",
+    email: "inquiries@stele.ae",
+    phone: "+971 (50) 561-7100",
+    address:
+      "The Opus tower (Tower B, B203), Al Amal St, Business Bay, Dubai, UAE",
   },
   quickLinks = ["Home", "Projects", "About", "Services", "Contact"],
   services = [
@@ -101,7 +102,7 @@ const Footer = ({
         <div className="border-t border-white/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
-              href="#"
+              href="https://www.instagram.com/stele.design/"
               className="w-10 h-10 bg-orange-700 hover:bg-purple flex items-center justify-center transition-colors"
             >
               <Instagram className="w-5 h-5" />

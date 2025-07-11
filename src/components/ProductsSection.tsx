@@ -31,8 +31,7 @@ const ProductsSection = ({
             projects
           </p>
         </div>
-
-        <div className="pl-16 -mr-16">
+        <div className="bg-orange-600 pl-8 md:pl-16 lg:pl-24 overflow-hidden">
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
@@ -42,7 +41,7 @@ const ProductsSection = ({
             slantDirection="right"
           />
         </div>
-        <div className="pr-16 -ml-16 bg-mediumGrey py-16">
+        <div className="bg-mediumGrey-900 pr-8 md:pr-16 lg:pr-24 overflow-hidden">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
@@ -143,7 +142,7 @@ const ProductCarousel = ({
                     ? "polygon(0 0, 80% 0, 100% 100%, 20% 100%)"
                     : "polygon(20% 0, 100% 0, 80% 100%, 0% 100%)",
                 overflow: "hidden",
-                "margin-right": "-50px",
+                "margin-right": "-120px",
               }}
             >
               <img
@@ -163,13 +162,13 @@ const ProductCarousel = ({
 const defaultMarblesImages: ProductImage[] = [
   {
     id: "1",
-    url: "/images/image 12.png",
-    alt: "White Marble with Grey Veining",
+    url: "/images/image 19.png",
+    alt: "Golden Brown Marble",
   },
   {
     id: "2",
-    url: "/images/image 19.png",
-    alt: "Golden Brown Marble",
+    url: "/images/image 12.png",
+    alt: "White Marble with Grey Veining",
   },
   {
     id: "3",
