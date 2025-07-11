@@ -28,7 +28,15 @@ const ServicesSection = ({
   services = defaultServices,
 }: ServicesSectionProps) => {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16 bg-mediumGrey">
+    <section
+      className="py-16 px-4 md:px-8 lg:px-16 bg-mediumGrey relative"
+      style={{
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%), url('/images/Marble Grey.jpeg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
       <div className="mx-auto px-4 md:px-8 lg:px-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
