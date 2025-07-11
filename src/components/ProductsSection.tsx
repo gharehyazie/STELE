@@ -31,8 +31,7 @@ const ProductsSection = ({
             projects
           </p>
         </div>
-
-        <div>
+        <div className="bg-orange-600 pl-8 md:pl-16 lg:pl-24 overflow-hidden">
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
@@ -42,7 +41,7 @@ const ProductsSection = ({
             slantDirection="right"
           />
         </div>
-        <div className="bg-mediumGrey-900">
+        <div className="bg-mediumGrey-900 pr-8 md:pr-16 lg:pr-24 overflow-hidden">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
