@@ -20,8 +20,7 @@ const SecondarySection = ({
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1200&q=80')`,
-          backgroundImage: `url('/a.png')`,
+          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%), url('/images/WhatsApp Image 2025-07-11 at 12.24.23.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
