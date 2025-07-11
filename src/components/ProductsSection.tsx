@@ -42,7 +42,7 @@ const ProductsSection = ({
             slantDirection="right"
           />
         </div>
-        <div className="bg-mediumGrey">
+        <div className="bg-mediumGrey-900">
           {/* Custom Made Furniture Section */}
           <ProductCarousel
             title="CUSTOM-MADE FURNITURE"
