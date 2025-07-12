@@ -32,8 +32,16 @@ const Footer = ({
   ],
 }: FooterProps) => {
   return (
-    <footer className="bg-orange text-white">
-      <div className="mx-auto px-4 md:px-8 lg:px-16 py-12">
+    <footer
+      className="text-white relative bg-mediumGrey"
+      style={{
+        backgroundImage: "url('/images/Amboyna.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="mx-auto px-4 md:px-8 lg:px-16 py-12 relative z-10 pt-40">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
