@@ -11,16 +11,24 @@ import Footer from "./Footer";
 
 function Home() {
   return (
-    <div className="w-full min-h-screen bg-white">
+    <div className="w-full min-h-screen bg-white" id="top">
       <Header />
       <HeroSection />
       <SecondarySection />
       <ProofSection />
       <PhotoSection />
-      <ServicesSection />
-      <ProductsSection />
-      <PortfolioGallery />
-      <ContactSection />
+      <div id="services">
+        <ServicesSection />
+      </div>
+      <div id="products">
+        <ProductsSection />
+      </div>
+      <div id="portfolio">
+        <PortfolioGallery />
+      </div>
+      <div id="contact">
+        <ContactSection />
+      </div>
       <Footer />
     </div>
   );
