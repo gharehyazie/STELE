@@ -30,35 +30,6 @@ const PortfolioGallery = ({
         </div>
 
         <Tabs defaultValue="all" className="w-full">
-          <div className="flex justify-center mb-8">
-            <TabsList className="bg-beige p-1">
-              <TabsTrigger
-                value="all"
-                className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
-              >
-                All Projects
-              </TabsTrigger>
-              <TabsTrigger
-                value="residential"
-                className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
-              >
-                Residential
-              </TabsTrigger>
-              <TabsTrigger
-                value="commercial"
-                className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
-              >
-                Commercial
-              </TabsTrigger>
-              <TabsTrigger
-                value="hospitality"
-                className="px-6 py-2 data-[state=active]:bg-amber-800 data-[state=active]:text-white"
-              >
-                Hospitality
-              </TabsTrigger>
-            </TabsList>
-          </div>
-
           <TabsContent value="all" className="mt-0">
             <ProjectGrid projects={projects} />
           </TabsContent>
@@ -125,7 +96,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {project.category}
           </span>
         </div>
-        <p className="text-purple/70">{project.description}</p>
+        <p className="text-purple/70 h-24 overflow-hidden">
+          {project.description}
+        </p>
         <Button
           variant="outline"
           className="mt-4 border-orange text-orange hover:bg-purple hover:text-white w-full"
@@ -141,30 +114,27 @@ const ProjectCard = ({ project }: { project: Project }) => {
 const defaultProjects: Project[] = [
   {
     id: "1",
-    title: "Coastal Retreat",
+    title: "Villa - Dining Hall",
     category: "residential",
     description:
-      "A serene beachfront property featuring natural materials and panoramic ocean views.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+      "Features a fully customized dining table crafted by Stele with natural stone top and solid wooden legs, creating a sophisticated setting for gatherings.",
+    imageUrl: "/images/dining-small.png",
   },
   {
     id: "2",
-    title: "Urban Loft",
+    title: "Villa - Family Hall",
     category: "residential",
     description:
-      "Industrial elements meet warm textures in this converted warehouse space.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600607687644-c7f34bc91088?w=800&q=80",
+      "Showcases custom-made Stele furniture including a uniquely carved coffee table in solid natural stone, balanced with plush modular seating.",
+    imageUrl: "/images/hall-small.png",
   },
   {
     id: "3",
-    title: "Artisan Café",
-    category: "commercial",
+    title: "Villa - Powder Room",
+    category: "residential",
     description:
-      "A welcoming café space designed with sustainable materials and artisanal details.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+      "A refined powder room reflecting contemporary aesthetics and timeless elegance with carefully curated design elements and material integrity.",
+    imageUrl: "/images/washroom.png",
   },
 ];
 

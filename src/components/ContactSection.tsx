@@ -51,12 +51,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.4309625483816!2d55.26230939678953!3d25.188685000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69cd8f669cbf%3A0x1086c324a5946077!2sThe%20Opus%20by%20OMNIYAT%20designed%20by%20Zaha%20Hadid!5e0!3m2!1sen!2sae!4v1752134753704!5m2!1sen!2sae"
               width="100%"
-              height="500"
+              height="400"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[500px] rounded-lg"
+              className="w-full h-[400px] rounded-lg"
             />
           </div>
 
@@ -106,7 +106,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  rows={6}
+                  rows={10}
                   className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange resize-none"
                 />
               </div>

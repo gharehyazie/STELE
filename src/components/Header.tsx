@@ -4,15 +4,33 @@ import { Menu, X } from "lucide-react";
 
 interface HeaderProps {
   logo?: string;
-  menuItems?: string[];
+  menuItems?: { label: string; href: string }[];
 }
 
 const Header = ({
   logo = "STELE",
-  menuItems = ["Home", "Projects", "About", "Contact"],
+  menuItems = [
+    { label: "Home", href: "#top" },
+    { label: "Services", href: "#services" },
+    { label: "Products", href: "#products" },
+    { label: "Projects", href: "#portfolio" },
+    { label: "Contact", href: "#contact" },
+  ],
 }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (href: string) => {
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,15 +67,16 @@ const Header = ({
           <div className="hidden md:flex items-center space-x-1">
             {menuItems.map((item) => (
               <Button
-                key={item}
+                key={item.label}
                 variant="ghost"
                 className={`transition-all duration-300 hover:bg-orange/10 ${
                   isScrolled
                     ? "text-purple hover:text-orange"
                     : "text-white hover:text-orange-200"
                 }`}
+                onClick={() => scrollToSection(item.href)}
               >
-                {item}
+                {item.label}
               </Button>
             ))}
             <Button
@@ -66,6 +85,7 @@ const Header = ({
                   ? "bg-orange hover:bg-orange-700 text-white"
                   : "bg-orange hover:bg-orange-700 text-white"
               }`}
+              onClick={() => scrollToSection("#contact")}
             >
               Let's talk
             </Button>
@@ -90,17 +110,17 @@ const Header = ({
             <div className="py-4 px-4 space-y-2">
               {menuItems.map((item) => (
                 <Button
-                  key={item}
+                  key={item.label}
                   variant="ghost"
                   className="w-full justify-start text-purple hover:text-orange hover:bg-orange/10"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => scrollToSection(item.href)}
                 >
-                  {item}
+                  {item.label}
                 </Button>
               ))}
               <Button
                 className="w-full bg-orange hover:bg-orange-700 text-white rounded-none mt-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => scrollToSection("#contact")}
               >
                 Let's talk
               </Button>
