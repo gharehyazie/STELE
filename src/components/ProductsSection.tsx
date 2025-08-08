@@ -142,7 +142,7 @@ const ProductCarousel = ({
                     ? "polygon(0 0, 80% 0, 100% 100%, 20% 100%)"
                     : "polygon(20% 0, 100% 0, 80% 100%, 0% 100%)",
                 overflow: "hidden",
-                "margin-right": "-120px",
+                marginRight: "-120px",
               }}
             >
               <img
