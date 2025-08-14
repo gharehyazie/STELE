@@ -31,7 +31,7 @@ const ProductsSection = ({
             projects
           </p>
         </div>
-        <div className="bg-orange-600 pl-8 md:pl-16 lg:pl-24 overflow-hidden">
+        <div className="bg-orange-200 pl-8 md:pl-16 lg:pl-24 overflow-hidden">
           {/* Marbles Section */}
           <ProductCarousel
             title="MARBLES"
