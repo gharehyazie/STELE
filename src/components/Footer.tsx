@@ -1,5 +1,6 @@
 import React from "react";
 import { Mail, Phone, MapPin, Instagram, Linkedin } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface FooterProps {
   companyName?: string;
@@ -18,9 +19,8 @@ const Footer = ({
   tagline = "Elevating spaces through thoughtful design and curated aesthetics",
   contactInfo = {
     email: "inquiries@stele.ae",
-    phone: "+971 (50) 561-7100",
-    address:
-      "The Opus tower (Tower B, B203), Al Amal St, Business Bay, Dubai, UAE",
+    phone: "+971-58-520-0478",
+    address: "The Opus by Omniyat, Office B203, Tower B, Business Bay, Dubai",
   },
   quickLinks = ["Home", "Projects", "About", "Services", "Contact"],
   services = [
@@ -35,75 +35,90 @@ const Footer = ({
     <footer
       className="text-white relative bg-mediumGrey"
       style={{
-        backgroundImage: "url('/images/Amboyna.png')",
+        backgroundImage: "url('/images/footer-bg-wood.png')",
         backgroundSize: "cover",
         backgroundPosition: "top",
         backgroundRepeat: "no-repeat",
       }}
     >
       <div className="mx-auto px-4 md:px-8 lg:px-16 py-12 relative z-10 pt-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">{companyName}</h3>
-            <p className="text-slate-300 mb-6 max-w-md">{tagline}</p>
-
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <Mail className="w-5 h-5 text-white mr-3" />
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  {contactInfo.email}
-                </a>
-              </div>
-
-              <div className="flex items-center">
-                <Phone className="w-5 h-5 text-white mr-3" />
-                <a
-                  href={`tel:${contactInfo.phone}`}
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  {contactInfo.phone}
-                </a>
-              </div>
-
-              <div className="flex items-start">
-                <MapPin className="w-5 h-5 text-white mr-3 mt-1" />
-                <span className="text-white/80">{contactInfo.address}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr] gap-12 mb-8">
+          {/* Company Info Card */}
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white h-full">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold text-white">
+                {companyName}
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <p className="text-white mb-6">{tagline}</p>
+              <div className="space-y-3">
+                <div className="flex items-center">
+                  <Mail className="w-5 h-5 text-white mr-3" />
                   <a
-                    href="#"
-                    className="text-white/80 hover:text-white transition-colors"
+                    href={`mailto:${contactInfo.email}`}
+                    className="text-white hover:text-white/80 transition-colors"
                   >
-                    {link}
+                    {contactInfo.email}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-white mr-3" />
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="text-white hover:text-white/80 transition-colors"
+                  >
+                    {contactInfo.phone}
+                  </a>
+                </div>
+                <div className="flex items-start">
+                  <MapPin className="w-5 h-5 text-white mr-3 mt-1" />
+                  <span className="text-white">{contactInfo.address}</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-white/80">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Quick Links Card */}
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white h-full">
+            <CardHeader>
+              <CardTitle className="text-lg font-semibold text-white">
+                Quick Links
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <ul className="space-y-2">
+                {quickLinks.map((link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="text-white hover:text-white/80 transition-colors"
+                    >
+                      {link}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+
+          {/* Services Card */}
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white h-full">
+            <CardHeader>
+              <CardTitle className="text-lg font-semibold text-white">
+                Services
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="flex-1">
+              <ul className="space-y-2">
+                {services.map((service) => (
+                  <li key={service}>
+                    <span className="text-white">{service}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Social Media & Copyright */}
