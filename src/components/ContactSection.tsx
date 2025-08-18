@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { useToast } from "./ui/use-toast";
 
 interface ContactSectionProps {
   title?: string;
@@ -19,6 +20,9 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
@@ -29,10 +33,56 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'a5e38913-0bc8-4e0d-bd19-a28278910186',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          subject: 'New Contact Form Submission from Stele Website',
+          from_name: formData.name,
+          replyto: formData.email,
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Message sent successfully!",
+          description: "Thank you for contacting us. We'll get back to you soon.",
+          variant: "default",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.message || 'Something went wrong');
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Sorry, there was an error sending your message. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,7 +122,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange"
+                    disabled={isSubmitting}
+                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -83,7 +134,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange"
+                    disabled={isSubmitting}
+                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -95,7 +147,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange"
+                  disabled={isSubmitting}
+                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                 />
               </div>
 
@@ -107,15 +160,17 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   onChange={handleInputChange}
                   required
                   rows={10}
-                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange resize-none"
+                  disabled={isSubmitting}
+                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange resize-none disabled:opacity-50"
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 transition-colors duration-200"
+                disabled={isSubmitting}
+                className="w-full bg-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
