@@ -18,9 +18,9 @@ const Footer = ({
   companyName = "STELE: Design + Decor",
   tagline = "Elevating spaces through thoughtful design and curated aesthetics",
   contactInfo = {
-    email: "inquiries@stele.ae",
-    phone: "+971-58-520-0478",
-    address: "The Opus by Omniyat, Office B203, Tower B, Business Bay, Dubai",
+    email: "info@stele.ae",
+    phone: "+971 52 113 8066",
+    address: "B203-Tower B, Opus By Omniyat, Business Bay, Dubai, UAE",
   },
   quickLinks = ["Home", "Projects", "About", "Services", "Contact"],
   services = [
@@ -65,7 +65,9 @@ const Footer = ({
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-white mr-3" />
                   <a
-                    href={`tel:${contactInfo.phone}`}
+                    href={`https://wa.me/${contactInfo.phone.replace(/[^0-9]/g, "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white hover:text-white/80 transition-colors"
                   >
                     {contactInfo.phone}

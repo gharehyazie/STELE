@@ -69,7 +69,7 @@ const Header = ({
               <Button
                 key={item.label}
                 variant="ghost"
-                className={`transition-all duration-300 hover:bg-orange/10 ${
+                className={`transition-all duration-300 hover:bg-orange/10 text-lg ${
                   isScrolled
                     ? "text-purple hover:text-orange"
                     : "text-white hover:text-orange-200"
@@ -80,7 +80,7 @@ const Header = ({
               </Button>
             ))}
             <Button
-              className={`ml-4 rounded-none transition-all duration-300 ${
+              className={`ml-4 rounded-none transition-all duration-300 text-lg ${
                 isScrolled
                   ? "bg-orange hover:bg-orange-700 text-white"
                   : "bg-orange hover:bg-orange-700 text-white"
@@ -112,14 +112,14 @@ const Header = ({
                 <Button
                   key={item.label}
                   variant="ghost"
-                  className="w-full justify-start text-purple hover:text-orange hover:bg-orange/10"
+                  className="w-full justify-start text-purple hover:text-orange hover:bg-orange/10 text-lg"
                   onClick={() => scrollToSection(item.href)}
                 >
                   {item.label}
                 </Button>
               ))}
               <Button
-                className="w-full bg-orange hover:bg-orange-700 text-white rounded-none mt-2"
+                className="w-full bg-orange hover:bg-orange-700 text-white rounded-none mt-2 text-lg"
                 onClick={() => scrollToSection("#contact")}
               >
                 Let's talk
