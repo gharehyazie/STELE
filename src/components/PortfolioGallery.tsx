@@ -99,13 +99,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <p className="text-purple/70 h-24 overflow-hidden">
           {project.description}
         </p>
-        <Button
-          variant="outline"
-          className="mt-4 border-orange text-orange hover:bg-purple hover:text-white w-full"
-          style={{ borderRadius: 0 }}
-        >
-          View Details
-        </Button>
       </CardContent>
     </Card>
   );

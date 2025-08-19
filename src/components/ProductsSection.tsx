@@ -185,18 +185,18 @@ const defaultMarblesImages: ProductImage[] = [
 const defaultFurnitureImages: ProductImage[] = [
   {
     id: "1",
-    url: "/images/image 23.png",
-    alt: "Custom Kitchen Cabinetry",
+    url: "/images/luxury-kitchen-cabinetry.jpg",
+    alt: "Luxury Kitchen Cabinetry",
   },
   {
     id: "2",
-    url: "/images/image 24.png",
-    alt: "Modern Living Room Furniture",
+    url: "/images/modern-dining-room.jpg",
+    alt: "Modern Dining Room Furniture",
   },
   {
     id: "3",
-    url: "/images/image 5.png",
-    alt: "Custom Dining Set",
+    url: "/images/contemporary-living-space.jpg",
+    alt: "Contemporary Living Space Design",
   },
 ];
 
