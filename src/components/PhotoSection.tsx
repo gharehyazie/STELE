@@ -7,7 +7,7 @@ interface PhotoSectionProps {
 }
 
 const PhotoSection = ({
-  videoUrl = "/images/photo-video.mp4",
+  videoUrl = "/images/villa-video.mp4",
   fallbackImageUrl = "/images/a.png",
   alt = "Interior Design Showcase",
 }: PhotoSectionProps) => {
