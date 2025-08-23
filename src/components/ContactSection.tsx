@@ -38,22 +38,22 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: 'a5e38913-0bc8-4e0d-bd19-a28278910186',
+          access_key: "b830ec22-d775-4574-b0be-9e6ebb3cde97",
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
-          subject: 'New Contact Form Submission from Stele Website',
+          subject: "New Contact Form Submission from Stele Website",
           from_name: formData.name,
           replyto: formData.email,
-        })
+        }),
       });
 
       const result = await response.json();
@@ -61,7 +61,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
       if (result.success) {
         toast({
           title: "Message sent successfully!",
-          description: "Thank you for contacting us. We'll get back to you soon.",
+          description:
+            "Thank you for contacting us. We'll get back to you soon.",
           variant: "default",
         });
         // Reset form
@@ -72,12 +73,13 @@ const ContactSection: React.FC<ContactSectionProps> = ({
           message: "",
         });
       } else {
-        throw new Error(result.message || 'Something went wrong');
+        throw new Error(result.message || "Something went wrong");
       }
     } catch (error) {
       toast({
         title: "Error sending message",
-        description: "Sorry, there was an error sending your message. Please try again or contact us directly.",
+        description:
+          "Sorry, there was an error sending your message. Please try again or contact us directly.",
         variant: "destructive",
       });
     } finally {
@@ -170,7 +172,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                 disabled={isSubmitting}
                 className="w-full bg-orange hover:bg-orange-600 text-white font-semibold py-3 px-6 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

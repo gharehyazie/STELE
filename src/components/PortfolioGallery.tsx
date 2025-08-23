@@ -52,15 +52,6 @@ const PortfolioGallery = ({
             />
           </TabsContent>
         </Tabs>
-
-        <div className="mt-12 text-center">
-          <Button
-            className="bg-orange hover:bg-purple text-white px-8 py-2 h-auto"
-            style={{ borderRadius: 0 }}
-          >
-            View All Projects
-          </Button>
-        </div>
       </div>
     </section>
   );
