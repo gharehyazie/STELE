@@ -27,11 +27,11 @@ const HeroSection = ({
           className="h-full w-full object-cover"
           poster="/images/Hero.png"
         >
-          <source src="/images/hero-video.mp4" type="video/mp4" />
-          <source src="/images/hero-video.webm" type="video/webm" />
+          <source src="/images/Stele-hero.mp4" type="video/mp4" />
+          <source src="/images/stele-hero.webm" type="video/webm" />
           {/* Fallback image for browsers that don't support video */}
           <img
-            src="/images/Hero.png"
+            src="/images/hero-image2.png"
             alt="Coastal architectural design"
             className="h-full w-full object-cover"
           />
