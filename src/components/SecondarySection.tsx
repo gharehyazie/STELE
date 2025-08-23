@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "./ui/button";
 
 interface SecondarySectionProps {
   title?: string;
@@ -15,12 +14,12 @@ const SecondarySection = ({
   onButtonClick = () => console.log("About button clicked"),
 }: SecondarySectionProps) => {
   return (
-    <section className="relative w-full h-[700px] bg-mediumGrey">
+    <section className="relative w-full h-[700px] bg-beige-500">
       {/* Background image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center z-0"
         style={{
-          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%), url('/images/WhatsApp Image 2025-07-11 at 12.24.23.jpeg')`,
+          backgroundImage: `linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(245,230,211,1) 100%), url('/images/WhatsApp Image 2025-07-11 at 12.24.23.jpeg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
