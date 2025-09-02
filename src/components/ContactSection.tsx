@@ -91,10 +91,10 @@ const ContactSection: React.FC<ContactSectionProps> = ({
     <section className="w-full py-16 bg-mediumGrey" id="contact">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-purple mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-3">
             {title}
           </h2>
-          <p className="text-purple/70 text-center max-w-2xl">{subtitle}</p>
+          <p className="text-black/70 text-center max-w-2xl">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto px-4 md:px-8 lg:px-16">
@@ -125,7 +125,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     onChange={handleInputChange}
                     required
                     disabled={isSubmitting}
-                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange disabled:opacity-50"
+                    className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     onChange={handleInputChange}
                     required
                     disabled={isSubmitting}
-                    className="bg-white border-purple-300 text-purple placeholder:text-purple-500 focus:border-orange focus:ring-orange disabled:opacity-50"
+                    className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
               </div>
