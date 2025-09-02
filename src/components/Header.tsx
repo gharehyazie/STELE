@@ -85,7 +85,9 @@ const Header = ({
                   ? "bg-orange hover:bg-orange-700 text-white"
                   : "bg-orange hover:bg-orange-700 text-white"
               }`}
-              onClick={() => scrollToSection("#contact")}
+              onClick={() =>
+                window.open("https://wa.me/+971585200478", "_blank")
+              }
             >
               Let's talk
             </Button>
@@ -120,7 +122,9 @@ const Header = ({
               ))}
               <Button
                 className="w-full bg-orange hover:bg-orange-700 text-white rounded-none mt-2 text-lg"
-                onClick={() => scrollToSection("#contact")}
+                onClick={() =>
+                  window.open("https://wa.me/+971585200478", "_blank")
+                }
               >
                 Let's talk
               </Button>
