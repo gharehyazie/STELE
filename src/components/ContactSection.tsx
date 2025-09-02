@@ -125,7 +125,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     onChange={handleInputChange}
                     required
                     disabled={isSubmitting}
-                    className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange disabled:opacity-50"
+                    className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                     onChange={handleInputChange}
                     required
                     disabled={isSubmitting}
-                    className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange disabled:opacity-50"
+                    className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-orange focus:ring-orange disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -163,7 +163,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
                   required
                   rows={10}
                   disabled={isSubmitting}
-                  className="bg-white border-beige-300 text-beige-800 placeholder:text-beige-500 focus:border-orange focus:ring-orange resize-none disabled:opacity-50"
+                  className="bg-white border-gray-300 text-black placeholder:text-gray-500 focus:border-orange focus:ring-orange resize-none disabled:opacity-50"
                 />
               </div>
 
